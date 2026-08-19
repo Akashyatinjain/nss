@@ -10,10 +10,9 @@ import { ArrowDown, Sparkles, HeartHandshake, ShieldCheck, Users } from "lucide-
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[92vh] lg:min-h-[96vh] flex items-center bg-radial-navy text-white overflow-hidden pt-12 pb-20">
+    <section className="relative min-h-[92vh] lg:min-h-[96vh] flex items-center bg-nss-warm-white text-nss-dark-text overflow-hidden pt-12 pb-20">
       {/* Background Subtle Gradient & Glow */}
-      <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
-      <div className="absolute inset-0 bg-grid-dark opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 bg-hero-glow opacity-30 pointer-events-none" />
 
       {/* Decorative Large NSS Wheel in Background */}
       <div className="absolute -right-24 md:-right-10 lg:right-10 top-1/2 -translate-y-1/2 pointer-events-none opacity-20 lg:opacity-25 scale-125 lg:scale-150">
@@ -25,24 +24,24 @@ export function HeroSection() {
           {/* Left Column: Editorial Headline & Actions (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* National Label Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-widest uppercase mb-6 text-red-200 shadow-sm animate-pulse-subtle">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nss-red/10 backdrop-blur-md border border-nss-red/20 text-xs font-semibold tracking-widest uppercase mb-6 text-nss-red shadow-sm animate-pulse-subtle">
               <span className="w-2 h-2 rounded-full bg-nss-red" />
               <span>National Service Scheme • {siteConfig.unitCode}</span>
             </div>
 
             {/* Massive Editorial Headline */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-heading tracking-tight leading-[1.08] text-white">
-              <span className="block text-slate-300 font-light text-2xl sm:text-4xl md:text-5xl mb-1 tracking-normal">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-heading tracking-tight leading-[1.08] text-nss-navy">
+              <span className="block text-slate-500 font-light text-2xl sm:text-4xl md:text-5xl mb-1 tracking-normal">
                 Students Who Serve.
               </span>
               NOT ME.{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-nss-red via-nss-red-bright to-orange-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-nss-red via-nss-red-bright to-nss-blue-accent">
                 BUT YOU.
               </span>
             </h1>
 
             {/* Supporting Subtitle */}
-            <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 font-body leading-relaxed max-w-2xl font-light">
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-600 font-body leading-relaxed max-w-2xl font-light">
               Empowering youth to turn knowledge into compassionate grassroots action. We build sustainable villages, organize life-saving blood banks, protect ecosystems, and inspire ethical leadership.
             </p>
 
@@ -69,34 +68,34 @@ export function HeroSection() {
             </div>
 
             {/* Micro Highlights Pill Row */}
-            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 w-full max-w-lg">
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-3 gap-2 sm:gap-4 w-full max-w-lg">
               <div className="flex items-center gap-2 sm:gap-2.5">
-                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-nss-red-bright border border-white/10 shrink-0">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-nss-red/10 text-nss-red border border-nss-red/10 shrink-0">
                   <HeartHandshake className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-xs sm:text-sm font-bold text-white font-heading">100%</div>
-                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Voluntary</div>
+                  <div className="text-xs sm:text-sm font-bold text-nss-navy font-heading">100%</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 leading-tight">Voluntary</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 sm:gap-2.5">
-                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-amber-400 border border-white/10 shrink-0">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-nss-blue-soft text-nss-blue-accent border border-nss-blue-accent/10 shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-xs sm:text-sm font-bold text-white font-heading">10+ Yrs</div>
-                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Impact</div>
+                  <div className="text-xs sm:text-sm font-bold text-nss-navy font-heading">10+ Yrs</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 leading-tight">Impact</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 sm:gap-2.5">
-                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-emerald-400 border border-white/10 shrink-0">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-nss-blue-soft text-nss-blue-accent border border-nss-blue-accent/10 shrink-0">
                   <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-xs sm:text-sm font-bold text-white font-heading">550+</div>
-                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Volunteers</div>
+                  <div className="text-xs sm:text-sm font-bold text-nss-navy font-heading">550+</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 leading-tight">Volunteers</div>
                 </div>
               </div>
             </div>
@@ -153,7 +152,7 @@ export function HeroSection() {
       </div>
 
       {/* Subtle Scroll Indicator */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors pointer-events-none">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-500 hover:text-nss-navy transition-colors pointer-events-none">
         <span className="text-[10px] uppercase tracking-widest font-mono">Scroll to Explore</span>
         <ArrowDown className="w-3.5 h-3.5 animate-bounce text-nss-red-bright" />
       </div>

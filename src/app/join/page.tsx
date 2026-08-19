@@ -335,7 +335,7 @@ export default function JoinPage() {
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 {/* 1. Personal & Academic Fields */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 font-heading">
                       Full Name *
@@ -346,7 +346,7 @@ export default function JoinPage() {
                       placeholder="e.g. Rahul Sharma"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     />
                   </div>
 
@@ -360,12 +360,12 @@ export default function JoinPage() {
                       placeholder="e.g. rahul.s@apexinstitute.edu.in"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 font-heading">
                       Mobile Phone (WhatsApp) *
@@ -376,7 +376,7 @@ export default function JoinPage() {
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     />
                   </div>
 
@@ -390,7 +390,7 @@ export default function JoinPage() {
                       placeholder="e.g. 24CSE108"
                       value={formData.collegeId}
                       onChange={(e) => setFormData({ ...formData, collegeId: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white uppercase"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white uppercase"
                     />
                   </div>
 
@@ -401,7 +401,7 @@ export default function JoinPage() {
                     <select
                       value={formData.bloodGroup}
                       onChange={(e) => setFormData({ ...formData, bloodGroup: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     >
                       <option value="A+">A+</option>
                       <option value="A-">A-</option>
@@ -415,7 +415,7 @@ export default function JoinPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 font-heading">
                       Academic Department *
@@ -423,7 +423,7 @@ export default function JoinPage() {
                     <select
                       value={formData.department}
                       onChange={(e) => setFormData({ ...formData, department: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     >
                       <option value="Computer Science & Engineering">Computer Science & Engineering</option>
                       <option value="Information Technology">Information Technology</option>
@@ -443,7 +443,7 @@ export default function JoinPage() {
                     <select
                       value={formData.year}
                       onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     >
                       <option value="1st Year">1st Year</option>
                       <option value="2nd Year">2nd Year</option>

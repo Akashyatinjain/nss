@@ -153,54 +153,76 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Backdrop & Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-full bg-nss-navy-dark/98 backdrop-blur-xl border-b border-white/10 px-5 py-6 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200 max-h-[85vh] overflow-y-auto">
-          <div className="flex flex-col gap-1.5 mb-6">
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
+        <>
+          {/* Backdrop overlay */}
+          <div
+            className="lg:hidden fixed inset-0 top-[60px] bg-black/60 backdrop-blur-sm z-30 animate-in fade-in duration-200"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
 
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={cn(
-                    "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all",
-                    isActive
-                      ? "bg-white/10 text-white font-bold border-l-4 border-nss-red"
-                      : "text-slate-300 hover:bg-white/5 hover:text-white"
-                  )}
-                >
-                  <span>{link.name}</span>
-                  <ChevronRight className="w-4 h-4 text-slate-500" />
-                </Link>
-              );
-            })}
-          </div>
+          <div className="lg:hidden fixed inset-x-0 top-[60px] bg-nss-navy-dark/98 backdrop-blur-2xl border-b border-white/15 px-6 py-6 shadow-2xl z-40 animate-in slide-in-from-top-4 duration-200 max-h-[85vh] overflow-y-auto">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs text-slate-400">
+              <span className="font-heading font-bold uppercase tracking-wider text-nss-red-bright">
+                Navigation Menu
+              </span>
+              <span>{siteConfig.unitCode}</span>
+            </div>
 
-          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-            <Button
-              href="/join"
-              variant="primary"
-              size="lg"
-              showArrow
-              className="w-full text-sm font-bold uppercase tracking-wider"
-            >
-              Become a Volunteer (Join NSS)
-            </Button>
+            <div className="flex flex-col gap-1.5 mb-6">
+              {NAV_LINKS.map((link) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
 
-            <div className="flex items-center justify-between text-xs text-slate-400 px-2 py-1 bg-white/5 rounded-lg">
-              <div className="flex items-center gap-2">
-                <HeartHandshake className="w-4 h-4 text-nss-red-bright" />
-                <span>Motto: Not Me But You</span>
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all active:scale-[0.98]",
+                      isActive
+                        ? "bg-gradient-to-r from-nss-red/20 to-white/5 text-white font-bold border-l-4 border-nss-red"
+                        : "text-slate-300 hover:bg-white/5 hover:text-white"
+                    )}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight
+                      className={cn(
+                        "w-4 h-4 transition-transform",
+                        isActive ? "text-nss-red-bright translate-x-0.5" : "text-slate-500"
+                      )}
+                    />
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+              <Button
+                href="/join"
+                variant="primary"
+                size="lg"
+                showArrow
+                className="w-full text-xs font-bold uppercase tracking-wider shadow-glow-red py-3.5"
+              >
+                Become a Volunteer (Join NSS)
+              </Button>
+
+              <div className="flex items-center justify-between text-xs text-slate-400 px-3 py-2 bg-white/5 rounded-xl border border-white/10">
+                <div className="flex items-center gap-2">
+                  <HeartHandshake className="w-4 h-4 text-nss-red-bright" />
+                  <span className="font-medium text-slate-300">NOT ME BUT YOU</span>
+                </div>
+                <span className="text-amber-300 font-bold font-mono">{siteConfig.stats.volunteers} Active</span>
               </div>
-              <span className="text-slate-300 font-semibold">{siteConfig.stats.volunteers} Volunteers</span>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

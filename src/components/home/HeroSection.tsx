@@ -69,34 +69,34 @@ export function HeroSection() {
             </div>
 
             {/* Micro Highlights Pill Row */}
-            <div className="mt-10 pt-8 border-t border-white/10 grid grid-cols-3 gap-4 w-full max-w-lg">
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-white/5 text-nss-red-bright border border-white/10">
-                  <HeartHandshake className="w-4 h-4" />
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 w-full max-w-lg">
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-nss-red-bright border border-white/10 shrink-0">
+                  <HeartHandshake className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">100%</div>
-                  <div className="text-[11px] text-slate-400">Voluntary Service</div>
+                  <div className="text-xs sm:text-sm font-bold text-white font-heading">100%</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Voluntary</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-white/5 text-amber-400 border border-white/10">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-amber-400 border border-white/10 shrink-0">
+                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">10+ Yrs</div>
-                  <div className="text-[11px] text-slate-400">Of Impact</div>
+                  <div className="text-xs sm:text-sm font-bold text-white font-heading">10+ Yrs</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Impact</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-white/5 text-emerald-400 border border-white/10">
-                  <Users className="w-4 h-4" />
+              <div className="flex items-center gap-2 sm:gap-2.5">
+                <div className="p-1.5 sm:p-2 rounded-lg bg-white/5 text-emerald-400 border border-white/10 shrink-0">
+                  <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">550+</div>
-                  <div className="text-[11px] text-slate-400">Active Volunteers</div>
+                  <div className="text-xs sm:text-sm font-bold text-white font-heading">550+</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">Volunteers</div>
                 </div>
               </div>
             </div>

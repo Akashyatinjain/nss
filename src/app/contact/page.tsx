@@ -251,7 +251,7 @@ export default function ContactPage() {
                         placeholder="e.g. Priyanshu Sharma"
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                       />
                     </div>
 
@@ -265,7 +265,7 @@ export default function ContactPage() {
                         placeholder="e.g. priyanshu@example.com"
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                       />
                     </div>
                   </div>
@@ -280,7 +280,7 @@ export default function ContactPage() {
                         placeholder="+91 98765 43210"
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                       />
                     </div>
 
@@ -291,7 +291,7 @@ export default function ContactPage() {
                       <select
                         value={formState.type}
                         onChange={(e) => setFormState({ ...formState, type: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                       >
                         <option value="General Inquiry">General Inquiry</option>
                         <option value="Volunteering Queries">Volunteering Queries</option>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                       placeholder="Brief summary of your inquiry..."
                       value={formState.subject}
                       onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     />
                   </div>
 
@@ -326,7 +326,7 @@ export default function ContactPage() {
                       placeholder="Write your message here..."
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-sm bg-nss-warm-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nss-navy text-base sm:text-sm bg-nss-warm-white"
                     />
                   </div>
 

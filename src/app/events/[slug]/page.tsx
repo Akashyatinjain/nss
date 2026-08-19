@@ -231,7 +231,7 @@ export default async function EventDetailPage({ params }: Props) {
             </div>
 
             {/* Right Sidebar (4 Cols) */}
-            <div className="lg:col-span-4 flex flex-col gap-6 sticky top-24">
+            <div className="lg:col-span-4 w-full flex flex-col gap-6 lg:sticky lg:top-24">
               {/* Registration Action Card */}
               <div id="register" className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-glass">
                 <div className="text-xs font-bold uppercase tracking-wider text-nss-red mb-1">

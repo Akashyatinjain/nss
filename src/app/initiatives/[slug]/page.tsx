@@ -198,7 +198,7 @@ export default async function InitiativeDetailPage({ params }: Props) {
             </div>
 
             {/* Right Sidebar (4 Cols) */}
-            <div className="lg:col-span-4 flex flex-col gap-6 sticky top-24">
+            <div className="lg:col-span-4 w-full flex flex-col gap-6 lg:sticky lg:top-24">
               {/* Coordinator Card */}
               <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm">
                 <div className="text-xs font-bold uppercase tracking-wider text-nss-blue mb-1">

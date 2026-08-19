@@ -153,76 +153,105 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Backdrop & Menu */}
+      {/* Mobile Right Drawer / Sidebar Sheet */}
       {mobileMenuOpen && (
-        <>
-          {/* Backdrop overlay */}
+        <div className="lg:hidden fixed inset-0 z-50 overflow-hidden">
+          {/* Dark Blurred Backdrop */}
           <div
-            className="lg:hidden fixed inset-0 top-[60px] bg-black/60 backdrop-blur-sm z-30 animate-in fade-in duration-200"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity animate-in fade-in duration-300"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
 
-          <div className="lg:hidden fixed inset-x-0 top-[60px] bg-nss-navy-dark/98 backdrop-blur-2xl border-b border-white/15 px-6 py-6 shadow-2xl z-40 animate-in slide-in-from-top-4 duration-200 max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs text-slate-400">
-              <span className="font-heading font-bold uppercase tracking-wider text-nss-red-bright">
-                Navigation Menu
-              </span>
-              <span>{siteConfig.unitCode}</span>
-            </div>
+          {/* Slide-in Drawer Container */}
+          <aside
+            aria-label="Mobile Navigation Sidebar"
+            className="fixed inset-y-0 right-0 max-w-full flex pl-10"
+          >
+            <div className="w-screen max-w-sm bg-nss-navy-dark border-l border-white/15 shadow-2xl flex flex-col justify-between p-6 overflow-y-auto animate-in slide-in-from-right duration-300 text-white">
+              {/* Drawer Top Bar */}
+              <div>
+                <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
+                  <div className="flex items-center gap-2.5">
+                    <NssBadgeIcon className="w-8 h-8" />
+                    <div>
+                      <div className="text-sm font-extrabold font-heading text-white">
+                        NSS UNIT 04
+                      </div>
+                      <div className="text-[10px] text-slate-400 font-medium truncate max-w-[180px]">
+                        {siteConfig.collegeName}
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="flex flex-col gap-1.5 mb-6">
-              {NAV_LINKS.map((link) => {
-                const isActive =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(link.href);
-
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
+                  <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className={cn(
-                      "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all active:scale-[0.98]",
-                      isActive
-                        ? "bg-gradient-to-r from-nss-red/20 to-white/5 text-white font-bold border-l-4 border-nss-red"
-                        : "text-slate-300 hover:bg-white/5 hover:text-white"
-                    )}
+                    className="p-2 rounded-xl bg-white/10 hover:bg-nss-red text-slate-200 hover:text-white transition-colors"
+                    aria-label="Close Sidebar Menu"
                   >
-                    <span>{link.name}</span>
-                    <ChevronRight
-                      className={cn(
-                        "w-4 h-4 transition-transform",
-                        isActive ? "text-nss-red-bright translate-x-0.5" : "text-slate-500"
-                      )}
-                    />
-                  </Link>
-                );
-              })}
-            </div>
-
-            <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-              <Button
-                href="/join"
-                variant="primary"
-                size="lg"
-                showArrow
-                className="w-full text-xs font-bold uppercase tracking-wider shadow-glow-red py-3.5"
-              >
-                Become a Volunteer (Join NSS)
-              </Button>
-
-              <div className="flex items-center justify-between text-xs text-slate-400 px-3 py-2 bg-white/5 rounded-xl border border-white/10">
-                <div className="flex items-center gap-2">
-                  <HeartHandshake className="w-4 h-4 text-nss-red-bright" />
-                  <span className="font-medium text-slate-300">NOT ME BUT YOU</span>
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
-                <span className="text-amber-300 font-bold font-mono">{siteConfig.stats.volunteers} Active</span>
+
+                {/* Nav Links List */}
+                <div className="flex flex-col gap-1.5">
+                  {NAV_LINKS.map((link) => {
+                    const isActive =
+                      link.href === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(link.href);
+
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={cn(
+                          "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all active:scale-[0.98]",
+                          isActive
+                            ? "bg-gradient-to-r from-nss-red to-nss-red-bright text-white shadow-md font-bold"
+                            : "text-slate-300 hover:bg-white/10 hover:text-white"
+                        )}
+                      >
+                        <span>{link.name}</span>
+                        <ChevronRight
+                          className={cn(
+                            "w-4 h-4 transition-transform",
+                            isActive ? "text-white translate-x-0.5" : "text-slate-500"
+                          )}
+                        />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Drawer Bottom Actions */}
+              <div className="pt-6 border-t border-white/10 flex flex-col gap-3 mt-6">
+                <Button
+                  href="/join"
+                  variant="primary"
+                  size="lg"
+                  showArrow
+                  className="w-full text-xs font-bold uppercase tracking-wider shadow-glow-red py-3.5"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Join NSS as Volunteer
+                </Button>
+
+                <div className="p-3 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    <HeartHandshake className="w-4 h-4 text-nss-red-bright" />
+                    <span className="font-medium text-slate-300">NOT ME BUT YOU</span>
+                  </div>
+                  <span className="text-amber-300 font-bold font-mono">
+                    {siteConfig.stats.volunteers} Active
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </>
+          </aside>
+        </div>
       )}
     </header>
   );

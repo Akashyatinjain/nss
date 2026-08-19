@@ -12,55 +12,51 @@ export function AchievementsSection() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-nss-navy text-white relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
-      <div className="absolute inset-0 bg-grid-dark opacity-30 pointer-events-none" />
-
+    <section className="py-20 lg:py-28 bg-white text-nss-dark-text relative overflow-hidden border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           badge="Honors & Recognition"
           title="Milestones of Excellence"
           subtitle="Honoring our volunteers' relentless dedication at national, state, and university forums."
           align="center"
-          theme="dark"
+          theme="light"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {achievementsData.map((item) => (
             <div
               key={item.id}
-              className="p-6 sm:p-7 rounded-2xl bg-white/5 border border-white/15 backdrop-blur-md flex flex-col justify-between hover:bg-white/10 hover:border-amber-400/40 transition-all duration-300 group"
+              className="p-6 sm:p-7 rounded-2xl bg-nss-soft-gray border border-slate-200 flex flex-col justify-between hover:bg-nss-blue-soft/60 hover:border-nss-red/30 transition-all duration-300 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="p-3 rounded-xl bg-white/10 border border-white/15 group-hover:scale-110 transition-transform">
-                    {iconMap[item.iconName] || <Trophy className="w-7 h-7 text-amber-400" />}
+                  <div className="p-3 rounded-xl bg-white border border-slate-200 group-hover:scale-110 transition-transform">
+                    {iconMap[item.iconName] || <Trophy className="w-7 h-7 text-amber-500" />}
                   </div>
-                  <span className="text-xs font-mono font-bold text-amber-300/90 bg-amber-400/10 px-2.5 py-1 rounded-full border border-amber-400/20">
+                  <span className="text-xs font-mono font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
                     {item.year}
                   </span>
                 </div>
 
-                <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-nss-red-bright mb-1">
+                <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-nss-red mb-1">
                   {item.badge}
                 </span>
 
-                <h3 className="text-lg font-bold font-heading text-white group-hover:text-amber-200 transition-colors">
+                <h3 className="text-lg font-bold font-heading text-nss-navy group-hover:text-nss-blue-accent transition-colors">
                   {item.title}
                 </h3>
 
-                <div className="text-xs text-slate-400 mt-1 mb-3">
-                  Issuer: <span className="text-slate-200">{item.issuer}</span>
+                <div className="text-xs text-slate-500 mt-1 mb-3">
+                  Issuer: <span className="text-slate-700">{item.issuer}</span>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed font-body">
+                <p className="text-xs text-slate-600 leading-relaxed font-body">
                   {item.description}
                 </p>
               </div>
 
-              <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-1.5 text-[11px] text-slate-400">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="mt-5 pt-4 border-t border-slate-200 flex items-center gap-1.5 text-[11px] text-slate-500">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Verified University Citation</span>
               </div>
             </div>
@@ -69,4 +65,4 @@ export function AchievementsSection() {
       </div>
     </section>
   );
-}
+          }

@@ -1,0 +1,51 @@
+export const siteConfig = {
+  name: "NSS APEX UNIT",
+  collegeName: "Apex Institute of Engineering & Technology",
+  universityName: "Affiliated to Central Technical University",
+  unitCode: "UNIT NO. 04 / NSS CELL",
+  motto: "NOT ME BUT YOU",
+  mottoHindi: "न मे परम् हितम् — स्वयं से पहले आप",
+  tagline: "Students Who Serve. Communities That Change.",
+  description:
+    "Official National Service Scheme (NSS) Unit of Apex Institute — empowering youth through community action, health initiatives, village empowerment, and sustainable social impact since 2014.",
+  foundedYear: "2014",
+  stats: {
+    volunteers: "550+",
+    initiatives: "48+",
+    livesTouched: "28,500+",
+    serviceHours: "18,000+",
+    bloodUnitsCollected: "2,400+",
+    treesPlanted: "6,200+",
+    campsConducted: "14+",
+    villagesAdopted: "3",
+  },
+  contact: {
+    address: "NSS Cell, Student Activity Centre, Ground Floor, North Campus, Apex Institute",
+    city: "New Delhi, Delhi - 110025, India",
+    email: "nss@apexinstitute.edu.in",
+    helplinePhone: "+91 (011) 2874-9901",
+    emergencyBloodPhone: "+91 98765 43210",
+    programmeOfficer: {
+      name: "Dr. Rajeshwar Sharma",
+      designation: "Programme Officer, NSS Cell",
+      email: "r.sharma@apexinstitute.edu.in",
+      phone: "+91 94123 45678",
+    },
+    socials: {
+      instagram: "https://instagram.com/nss_apex_unit",
+      linkedin: "https://linkedin.com/company/nss-apex-unit",
+      youtube: "https://youtube.com/@nss_apex_unit",
+      twitter: "https://twitter.com/nss_apex_unit",
+    },
+  },
+  officialNssLinks: {
+    nationalPortal: "https://nss.gov.in",
+    ministry: "https://yas.nic.in",
+  },
+  announcement: {
+    active: true,
+    text: "🌟 Registrations Open for Annual Special Rural Camp 2026 & Blood Donation Drive!",
+    link: "/events/annual-blood-donation-camp-2026",
+    badge: "NEW DRIVE",
+  },
+};
